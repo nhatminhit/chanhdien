@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npm install *)",
+      "Bash(npm start *)",
+      "Bash(curl -s -o /dev/null -w \"control: %{http_code}\\\\n\" http://localhost:3000/live/control.html)",
+      "Bash(curl -s -o /dev/null -w \"overlay: %{http_code}\\\\n\" http://localhost:3000/live/overlay.html)",
+      "Bash(curl -s -o /dev/null -w \"root: %{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(git fetch *)",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('vercel.json'\\)\\);JSON.parse\\(require\\('fs'\\).readFileSync\\('package.json'\\)\\);console.log\\('json ok'\\)\")",
+      "Bash(curl -s -o /dev/null -w \"index: %{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"hall: %{http_code}\\\\n\" http://localhost:3000/assets/hall.jpg)",
+      "Bash(curl -s -o /dev/null -w \"music: %{http_code}\\\\n\" http://localhost:3000/assets/music/music1.mp3)"
+    ]
+  }
+}

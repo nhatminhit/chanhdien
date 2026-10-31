@@ -1,0 +1,9 @@
+{
+  "name": "chanh-dien-online",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chánh Điện Tịnh Tâm — 2.5D temple hall for TikTok LIVE",
+  "scripts": {
+    "start": "node live/server.mjs"
+  }
+}
