@@ -13,7 +13,30 @@
       "Bash(curl -s -o /dev/null -w \"hall: %{http_code}\\\\n\" http://localhost:3000/assets/hall.jpg)",
       "Bash(curl -s -o /dev/null -w \"music: %{http_code}\\\\n\" http://localhost:3000/assets/music/music1.mp3)",
       "Bash(git ls-tree *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m '@ *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(npm view *)",
+      "Bash(npx --yes vercel@latest --version)",
+      "Bash(npx --yes vercel@latest build --yes)",
+      "Bash(curl -s --max-time 15 https://chanh-dien-online.vercel.app/)",
+      "Bash(curl -s -o /dev/null -w \"hall.jpg %{http_code} %{content_type}\\\\n\" --max-time 15 https://chanh-dien-online.vercel.app/assets/hall.jpg)",
+      "Bash(curl -s -o /dev/null -w \"music1 %{http_code}\\\\n\" --max-time 20 https://chanh-dien-online.vercel.app/assets/music/music1.mp3)",
+      "Bash(npx --yes vercel@latest ls)",
+      "Bash(npx --yes vercel@latest domains ls)",
+      "Bash(node --check tools/scrape.mjs)",
+      "Bash(node tools/scrape.mjs)",
+      "Bash(node -e ' *)",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/126.0 Safari/537.36\" \"https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Be+Vietnam+Pro:wght@400;500;600&display=swap\" -o /tmp/gf.css)",
+      "Read(//tmp/**)",
+      "Bash(mkdir -p assets/fonts)",
+      "Bash(mkdir -p .cache)",
+      "Bash(cp /tmp/gf.css .cache/gf.css)",
+      "Bash(curl -s -f -A \"Mozilla/5.0\" \"https://fonts.gstatic.com/s/notoserif/v33/ga6daw1J5X9T9RW6j9bNVls-hfgvz8JcMofYTYf6D30.woff2\" -o assets/fonts/ga6daw1J5X9T9RW6j9bNVls-hfgvz8JcMofYTYf6D30.woff2)",
+      "Bash(curl -s -o /dev/null -w \"fonts.css %{http_code}\\\\n\" http://localhost:3000/assets/fonts/fonts.css)",
+      "Bash(curl -s -o /dev/null -w \"woff2 %{http_code}\\\\n\" http://localhost:3000/assets/fonts/QdVPSTAyLFyeg_IDWvOJmVES_Hw4BXoKZA.woff2)",
+      "Bash(curl -s http://localhost:3000/)"
     ]
   }
 }
