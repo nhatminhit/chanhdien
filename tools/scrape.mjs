@@ -1,5 +1,4 @@
 // Mirror a public page and every file it references.
-//   node tools/scrape.mjs                                   → chanh-dien-online.vercel.app into ./scraped
 //   node tools/scrape.mjs --url URL --out DIR --max 300
 // Fetches only the start host and cdn.jsdelivr.net. Writes manifest.json with status + sha256 per URL.
 import fs from 'node:fs';
@@ -7,7 +6,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 
 const argv = process.argv.slice(2);
-const opt = { url: 'https://chanh-dien-online.vercel.app/', out: 'scraped', max: 300 };
+const opt = { url: '', out: 'scraped', max: 300 };
 for (let i = 0; i < argv.length; i++) {
   const a = argv[i];
   if (a === '--url') opt.url = argv[++i];
@@ -15,7 +14,7 @@ for (let i = 0; i < argv.length; i++) {
   else if (a === '--max') opt.max = +argv[++i];
 }
 
-const START = new URL(opt.url);
+const START = opt.url ? new URL(opt.url) : (console.error('usage: node tools/scrape.mjs --url URL [--out DIR] [--max N]'), process.exit(2));
 const OUT = path.resolve(opt.out);
 const ALLOWED = new Set([START.host, 'cdn.jsdelivr.net']);
 const TIMEOUT = 20000;

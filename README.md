@@ -6,24 +6,8 @@ Mã nguồn chia sẻ miễn phí (MIT). Có hai phần:
 
 | Thư mục | Là gì |
 |---|---|
-| `index.html`, `assets/` | Bản web tĩnh cho mọi người tự vào ngồi tụng (đăng lên Vercel hoặc Cloudflare Pages) |
+| `index.html`, `assets/` | Bản web tĩnh cho mọi người tự vào ngồi tụng |
 | `live/` | Bộ công cụ phát LIVE: server Node, overlay 9:16, bảng điều khiển |
-
-## Đưa bản web tĩnh lên Vercel
-
-Chỉ phần web tĩnh (`index.html` + `assets/`) đăng được lên Vercel. Bộ LIVE trong `live/` chạy trên máy phát, không đưa lên Vercel.
-
-`vercel.json` ở gốc đã cấu hình sẵn: không build, không cài dependency, phục vụ thẳng thư mục gốc, cache `assets/` 7 ngày.
-
-```bash
-npm i -g vercel     # hoặc npx vercel
-vercel              # lần đầu: đăng nhập, chọn phạm vi, xác nhận cấu hình
-vercel --prod       # đẩy bản chính thức
-```
-
-Hoặc trên web: **Add New → Project**, nhập repo GitHub, để trống Build Command và Output Directory, bấm Deploy.
-
-Lưu ý: `live/control.html` và `live/overlay.html` cũng được Vercel phục vụ dưới dạng file tĩnh, nhưng chúng cần WebSocket `/ws` của server Node nên mở trên Vercel sẽ không có dữ liệu. `server.mjs` không được Vercel chạy vì nó giữ kết nối WebSocket thường trực và lắng nghe TikTok LIVE — chạy trên máy phát như phần dưới.
 
 ## Chạy bộ LIVE trên máy phát
 
