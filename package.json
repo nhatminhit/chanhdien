@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "Chánh Điện Tịnh Tâm — 2.5D temple hall for TikTok LIVE",
+  "engines": { "node": ">=20" },
   "scripts": {
     "start": "node live/server.mjs"
   }

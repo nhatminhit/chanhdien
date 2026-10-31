@@ -3,9 +3,11 @@
   "framework": null,
   "buildCommand": null,
   "outputDirectory": ".",
-  "installCommand": "",
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    { "source": "/((?!assets/|live/).*)", "destination": "/index.html" }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
